@@ -45,7 +45,7 @@ namespace ZeroKWeb
                 db.SpringBattles.Where(
                         x =>
                             (x.StartTime >= monthStart) && (x.HasBots == false) &&
-                            (x.ResourceByMapResourceID.MapSupportLevel >= MapSupportLevel.Supported) && (x.ResourceByMapResourceID.MapIsSpecial == false))
+                            (x.ResourceByMapResourceID.MapSupportLevel >= MapSupportLevel.Supported) && (x.ResourceByMapResourceID.MapIsSpecial == false) && (x.ResourceByMapResourceID.MapIsChickens == false))
                     .SelectMany(x => x.AccountBattleAwards)
                     .GroupBy(x => x.AwardKey);
 
